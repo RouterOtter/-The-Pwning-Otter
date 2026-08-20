@@ -1,0 +1,109 @@
+# 🦦 The Pwning Otter
+
+
+
+# The Pwning Otter is a virtual cybersecurity lab built using Oracle VirtualBox. The environment is designed to provide hands-on experience with penetration testing methods, vulnerability assesment, enumeration, exploitation, and reporting in an isolated network
+
+
+## Project Overview
+
+The purpose of this project is to develop practical penetration testing skills through a self-hosted virtual lab environment
+
+
+##
+- Reconnaissance and enumeration
+- Identifying and validating vulnerabilities
+- Exploitation in a safe environment
+- Improving technical documentation skills
+- Preparing for Pentest+
+
+# 🌊 Tide 1: Lab Setup
+
+## Hypervisor
+ - Oracle VirtualBox
+
+## Virtual Machines
+
+### 🐉 Kali Linux
+**Role:** Attack Platform
+
+**Purpose:**
+ - Reconnaissance
+ - Enumeration
+ - Vulnerability Assessment
+ - Exploitation
+ - Reporting
+
+### 💀 Metasploitable2
+**Role:** Vulnerable Linux Host
+
+**Purpose:**
+ - Safe exploitation practice
+ - Service enumeration
+ - Vulnerability discovery
+ - Metasploit training
+
+### 🪟 Windows 10
+**Role:** Windows Workstation
+
+**Purpose:**
+ - Windows administration practice
+ - Enumeration exercises
+ - Security testing
+ - Future privilege escalation exercises
+
+
+# 🗺️ Network Diagram
+
+
+VirtualBox Lab Network
+
+------------------------------------------------
+
+
+## 🗺️ Network Diagram
+
+              VirtualBox Lab Network
+
+                   Kali Linux
+                192.168.56.10
+                       |
+                       |
+        +--------------+--------------+
+        |                             |
+        |                             |
+ Metasploitable2                Windows 10
+ 192.168.56.20               192.168.56.30
+```
+
+
+# 📂 Repository Structure
+
+
+
+The-Pwning-Otter
+│
+├── README.md
+│
+├── screenshots/
+│
+├── docs/
+│ ├── 01-lab-setup.md
+│ ├── 02-networking.md
+│ ├── 03-nmap.md
+│ ├── 04-enumeration.md
+│ ├── 05-vulnerability-analysis.md
+│ ├── 06-metasploit.md
+│ ├── 07-windows-testing.md
+│ ├── 08-reporting.md
+│ └── future-state.md
+│
+├── reports/
+│
+└── notes/
+
+```
+
+ 
+
+---
