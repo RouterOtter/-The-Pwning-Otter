@@ -1,82 +1,93 @@
 # 🦦 The Pwning Otter
 
+> Stay Curious. Test Responsibly. Keep Pwning.
 
+A hands-on penetration testing lab documenting my journey through offensive security, ethical hacking, vulnerability assessment, and certification preparation.
 
-# The Pwning Otter is a virtual cybersecurity lab built using Oracle VirtualBox. The environment is designed to provide hands-on experience with penetration testing methods, vulnerability assesment, enumeration, exploitation, and reporting in an isolated network
+---
 
+## 🎯 Project Goals
 
-## Project Overview
+The purpose of this project is to develop practical penetration testing skills through a self-hosted virtual lab environment.
 
-The purpose of this project is to develop practical penetration testing skills through a self-hosted virtual lab environment
+### Objectives
 
+- Learn penetration testing methodologies
+- Practice reconnaissance and enumeration
+- Identify and validate vulnerabilities
+- Perform exploitation in a safe environment
+- Improve technical documentation skills
+- Gain experience writing professional pentest reports
+- Prepare for penetration testing certifications
 
-##
-- Reconnaissance and enumeration
-- Identifying and validating vulnerabilities
-- Exploitation in a safe environment
-- Improving technical documentation skills
-- Preparing for Pentest+
+---
 
 # 🌊 Tide 1: Lab Setup
 
 ## Hypervisor
- - Oracle VirtualBox
+
+- Oracle VirtualBox
 
 ## Virtual Machines
 
 ### 🐉 Kali Linux
+
 **Role:** Attack Platform
 
 **Purpose:**
- - Reconnaissance
- - Enumeration
- - Vulnerability Assessment
- - Exploitation
- - Reporting
+
+- Reconnaissance
+- Enumeration
+- Vulnerability Assessment
+- Exploitation
+- Reporting
 
 ### 💀 Metasploitable2
+
 **Role:** Vulnerable Linux Host
 
 **Purpose:**
- - Safe exploitation practice
- - Service enumeration
- - Vulnerability discovery
- - Metasploit training
+
+- Safe exploitation practice
+- Service enumeration
+- Vulnerability discovery
+- Metasploit training
 
 ### 🪟 Windows 10
+
 **Role:** Windows Workstation
 
 **Purpose:**
- - Windows administration practice
- - Enumeration exercises
- - Security testing
- - Future privilege escalation exercises
 
+- Windows administration practice
+- Enumeration exercises
+- Security testing
+- Future privilege escalation exercises
 
+---
 
-------------------------------------------------
+# 🗺️ Network Diagram
 
+```text
+                 VirtualBox Lab Network
+    ------------------------------------------------
 
-## 🗺️ Network Diagram
-
-              VirtualBox Lab Network
-
-                   Kali Linux
-                192.168.56.10
-                       |
-                       |
-        +--------------+--------------+
-        |                             |
-        |                             |
- Metasploitable2                Windows 10
- 192.168.56.20               192.168.56.30
+           Kali Linux
+          192.168.56.10
+                 |
+                 |
+      ------------------------
+      |                      |
+      |                      |
+ Metasploitable2         Windows 10
+ 192.168.56.20        192.168.56.30
 ```
 
+---
 
 # 📂 Repository Structure
 
-
-
+```text
 The-Pwning-Otter
 │
 ├── README.md
@@ -84,22 +95,159 @@ The-Pwning-Otter
 ├── screenshots/
 │
 ├── docs/
-│ ├── 01-lab-setup.md
-│ ├── 02-networking.md
-│ ├── 03-nmap.md
-│ ├── 04-enumeration.md
-│ ├── 05-vulnerability-analysis.md
-│ ├── 06-metasploit.md
-│ ├── 07-windows-testing.md
-│ ├── 08-reporting.md
-│ └── future-state.md
+│   ├── 01-lab-setup.md
+│   ├── 02-networking.md
+│   ├── 03-nmap.md
+│   ├── 04-enumeration.md
+│   ├── 05-vulnerability-analysis.md
+│   ├── 06-metasploit.md
+│   ├── 07-windows-testing.md
+│   ├── 08-reporting.md
+│   └── future-state.md
 │
 ├── reports/
 │
 └── notes/
-
 ```
 
- 
+---
+
+# 📸 Evidence
+
+The following screenshots will be collected throughout the project:
+
+```text
+screenshots/
+├── virtualbox-overview.png
+├── kali-linux.png
+├── metasploitable2.png
+├── windows10.png
+├── network-settings.png
+├── ping-test.png
+└── nmap-scan-results.png
+```
 
 ---
+
+# 📖 Lab Notes
+
+## Why Build a Pentesting Lab?
+
+A dedicated lab environment allows offensive security concepts to be practiced safely without affecting production systems or external networks.
+
+## Why Kali Linux?
+
+Kali Linux provides many of the tools commonly used during penetration tests including:
+
+- Nmap
+- Metasploit Framework
+- Burp Suite
+- Hydra
+- Netcat
+- Wireshark
+
+## Why Metasploitable2?
+
+Metasploitable2 is an intentionally vulnerable Linux virtual machine designed for penetration testing practice and training.
+
+## Why Windows 10?
+
+Many enterprise environments contain Windows systems. Including a Windows workstation helps develop skills associated with system enumeration, credential access, privilege escalation, and detection opportunities.
+
+---
+
+# ✅ Current Progress
+
+## Infrastructure
+
+- [x] Install Oracle VirtualBox
+- [x] Deploy Kali Linux
+- [x] Deploy Metasploitable2
+- [x] Deploy Windows 10
+
+## Networking
+
+- [ ] Verify connectivity between hosts
+- [ ] Configure isolated lab network
+- [ ] Document IP addressing
+
+## Reconnaissance
+
+- [ ] Host Discovery
+- [ ] Network Scanning
+- [ ] Nmap Service Enumeration
+
+## Vulnerability Assessment
+
+- [ ] Identify exposed services
+- [ ] Analyze vulnerabilities
+- [ ] Validate findings
+
+## Exploitation
+
+- [ ] Metasploit Exercises
+- [ ] Manual Exploitation
+- [ ] Post-Exploitation Activities
+
+## Reporting
+
+- [ ] Create Findings Documentation
+- [ ] Build Sample Pentest Report
+- [ ] Record Lessons Learned
+
+---
+
+# 🚀 Future State: The Pwning Otter Cyber Range
+
+The long-term vision for this project is migrating the lab from VirtualBox to a dedicated self-hosted virtualization server.
+
+### Planned Infrastructure
+
+```text
+Mini PC Server
+│
+└── Proxmox VE
+    ├── Kali Linux
+    ├── Metasploitable2
+    ├── Windows 10
+    ├── Ubuntu Server
+    └── Security Onion
+```
+
+### Planned Features
+
+- Dedicated Proxmox host
+- Snapshot management
+- Multiple virtual networks
+- Security monitoring
+- Tailscale remote access
+- Detection engineering exercises
+- Expanded attack scenarios
+
+---
+
+# 🏴‍☠️ Learning Journey
+
+This repository documents my progression through the penetration testing lifecycle:
+
+🌊 Reconnaissance
+
+🐟 Enumeration
+
+🦀 Vulnerability Assessment
+
+🐙 Exploitation
+
+🦈 Privilege Escalation
+
+🐋 Detection & Monitoring
+
+📋 Reporting
+
+👑 Certification Preparation
+
+---
+
+## Disclaimer
+
+This lab is intended solely for educational and authorized security testing purposes. All testing activities are performed within controlled environments owned or explicitly permitted for use.
