@@ -1,0 +1,99 @@
+# 🦦 OtterSec Lab – Day 1
+*A cozy little corner of the cyber marsh where an otter learns offensive security techniques responsibly.*
+
+---
+
+## 🌊 Overview
+
+Day 1 of the OtterSec Lab focuses on setting up a small virtual environment for practicing **safe, controlled cybersecurity experiments**.  
+The goal of this session was to test a **reverse-shell workflow** inside an isolated lab and observe how modern defenses respond.
+
+---
+
+## 🏞️ Lab Environment
+
+Three virtual machines were created and configured:
+
+- **Kali Linux** – attacker box (local host machine)
+- **Windows 10** – target workstation
+- **Metasploitable 2** – intentionally vulnerable Linux VM
+
+All machines were placed on the same internal network to allow controlled testing.
+
+---
+
+## 🦦 Day 1 Activity – Reverse Shell Attempt
+
+### 1. Payload Delivery (High-Level)
+
+- **Goal:** Simulate a reverse-shell connection from Windows 10 back to Kali in a lab environment.
+- **Method:**  
+  - Hosted a temporary HTTP server on the Kali Linux VM.  
+  - Served a test executable payload from Kali.  
+  - Downloaded the executable on the Windows 10 VM via browser/command line.  
+
+This demonstrates how simple HTTP hosting can be used for file delivery in a controlled environment.
+
+### 2. Execution on Windows 10
+
+- The Windows 10 VM successfully downloaded the executable.
+- The executable was run on Windows 10 to initiate a reverse connection back to Kali.
+
+### 3. Session Termination (Likely Defender Interference)
+
+- Shortly after execution, the reverse-shell session was terminated.
+- Based on behavior and timing, the most likely cause was **Windows Defender**:
+  - Detected the executable as suspicious.
+  - Terminated the process and blocked the connection.
+
+This is expected behavior on modern Windows systems, which aggressively block unknown or shell-like binaries.
+
+---
+
+## 🛡️ Defender Reaction – High-Level Notes
+
+Windows Defender uses:
+
+- **Real-time protection** to scan files on access and execution.
+- **Behavior monitoring** to detect suspicious process activity.
+- **Cloud-based heuristics** to flag unknown binaries that resemble malware or remote shells.
+
+These combined protections can terminate reverse-shell sessions even in a lab environment.
+
+---
+
+## 🦦 Lessons Learned
+
+- **Payload delivery:** Simple HTTP hosting from Kali works smoothly for file transfer.
+- **Defensive controls:** Windows 10’s built-in defenses can quickly disrupt reverse-shell behavior.
+- **Future focus:**
+  - Use Metasploitable 2 for more consistent shell practice.
+  - Collect logs from Windows (Event Viewer, Defender logs) to better understand detections.
+  - Consider controlled Defender configuration changes *only* within the lab and with clear documentation.
+
+---
+
+## 🦦 Planned Next Steps
+
+- Add **screenshots** of the VMs and network settings.
+- Document **network topology** (IP addresses, subnets, routes).
+- Create **Day 2** notes for further experiments (e.g., logging, detection, and response).
+- Add more **otter-themed visuals** and badges to the repo.
+
+---
+
+## 📁 Suggested Repository Structure
+
+```text
+OtterSec-Lab/
+│
+├── Day1/
+│   ├── README.md        # This file
+│   ├── screenshots/
+│   └── notes/
+│
+├── Day2/
+│   └── README.md
+│
+└── assets/
+    └── otters/          # Otter images, icons, and fun stuff
