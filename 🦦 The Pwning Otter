@@ -167,15 +167,15 @@ Many enterprise environments contain Windows systems. Including a Windows workst
 
 ## Networking
 
-- [ ] Verify connectivity between hosts
-- [ ] Configure isolated lab network
-- [ ] Document IP addressing
+- [x] Verify connectivity between hosts
+- [x] Configure isolated lab network
+- [x] Document IP addressing
 
 ## Reconnaissance
 
-- [ ] Host Discovery
-- [ ] Network Scanning
-- [ ] Nmap Service Enumeration
+- [x] Host Discovery
+- [x] Network Scanning
+- [x] Nmap Service Enumeration
 
 ## Vulnerability Assessment
 
