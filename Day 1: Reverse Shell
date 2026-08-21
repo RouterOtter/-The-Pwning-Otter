@@ -82,18 +82,3 @@ These combined protections can terminate reverse-shell sessions even in a lab en
 
 ---
 
-## 📁 Suggested Repository Structure
-
-```text
-OtterSec-Lab/
-│
-├── Day1/
-│   ├── README.md        # This file
-│   ├── screenshots/
-│   └── notes/
-│
-├── Day2/
-│   └── README.md
-│
-└── assets/
-    └── otters/          # Otter images, icons, and fun stuff
